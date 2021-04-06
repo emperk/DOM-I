@@ -141,6 +141,10 @@ console.log(contactContentText);
 // const emailContent = contactSection.querySelectorAll('p');
 
 
+const footerContent = document.querySelectorAll('.footer');
+footerContent.textContent = siteContent.footer['copyright'];
+console.log(footerContent)
+
 
 
 
