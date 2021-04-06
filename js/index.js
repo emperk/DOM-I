@@ -62,27 +62,101 @@ links.forEach(item => item.style.color = 'green');
 
 // SELECTING SECTION "CTA" BEGINS //
 
-const ctaTitle = document.querySelector('h1'); // selecting content
+// const ctaTitle = document.querySelector('h1'); // selecting content
 
-ctaTitle.textContent = siteContent.cta['h1']; // adding to page
-
-
-
-// with uncle mark
+// ctaTitle.textContent = siteContent.cta['h1']; // adding to page
 
 
+const ctaSection = document.querySelector('.cta');
+const ctaText = ctaSection.querySelector('.cta-text')
+const ctaTitle = ctaText.querySelector('h1');
+const ctaButton = ctaText.querySelector('button');
+const ctaImage = ctaSection.querySelector('#cta-img')
 
-
-
-
-
-
+ctaTitle.textContent = siteContent.cta['h1'];
+ctaButton.textContent = siteContent.cta['button'];
+ctaImage.src = "img/header-img.png";
 
 
 
 // SELECTING SECTION "CTA" ENDS //
 
+
 // SELECTING SECTION "MAIN CONTENT" BEGINS //
+
+
+const mainContent = document.querySelector('.main-content');
+
+const mainContentTitle = mainContent.querySelectorAll('.text-content');
+mainContentTitle.forEach((item, i) => {
+  const allTitleContent = [
+    siteContent['main-content']['features-h4'],
+    siteContent['main-content']['about-h4'],
+    siteContent['main-content']['services-h4'],
+    siteContent['main-content']['product-h4'],
+    siteContent['main-content']['vision-h4'],
+  ]
+  item.textContent = allTitleContent[i];
+})
+
+const middleImg = mainContent.querySelector('#middle-img');
+middleImg.src = "img/mid-page-accent.jpg";
+
+const mainContentText = mainContent.querySelectorAll('.text-content')
+mainContentText.forEach((item, i) => {
+  const allTextContent = [
+    siteContent['main-content']['features-content'],
+    siteContent['main-content']['about-content'],
+    siteContent['main-content']['services-content'],
+    siteContent['main-content']['product-content'],
+    siteContent['main-content']['vision-content'],
+  ]
+  item.textContent = allTextContent[i];
+})
+console.log(mainContent);
+
+// SELECTING SECTION "MAIN CONTENT" ENDS
+
+// SELECTION CONTACT BEGINS 
+
+const contactSection = document.querySelector('.contact');
+// console.log(contactSection);
+
+const titleContactContent = contactSection.querySelector('h4');
+
+const contactContentText = contactSection.querySelectorAll('.contact');
+contactContentText.forEach((item, i) => {
+  const allContactText = [
+    siteContent['contact']['address'],
+    siteContent['contact']['phone'],
+    siteContent['contact']['email']
+  ]
+  item.textContent = allContactText[i];
+})
+console.log(contactContentText);
+
+
+// const addressContent = contactSection.querySelectorAll('p');
+// const phoneContent = contactSection.querySelectorAll('p');
+// const emailContent = contactSection.querySelectorAll('p');
+
+
+
+
+
+
+
+
+
+
+
+//IGNORE BELOW
+
+// SELECTING SECTION "MAIN CONTENT" BEGINS //
+
+
+
+
 
 // const allMainContent = document.querySelectorAll('main-content');
 // console.log(allMainContent); // selecting all main content
@@ -93,28 +167,6 @@ ctaTitle.textContent = siteContent.cta['h1']; // adding to page
 // const allFeaturesTextContent = document.querySelector('.text-content');
 // console.log(allFeaturesTextContent); // selecting everything within the features text content class
 
-
-const mainContent = document.querySelector('.main-content');
-const mainContentText = mainContent.querySelectorAll('.text-content')
-mainContentText.forEach((item, i) => {
-  const allContent = [
-    siteContent['main-content']['features-content'],
-    siteContent['main-content']['about-content'],
-    siteContent['main-content']['services-content'],
-    siteContent['main-content']['product-content'],
-    siteContent['main-content']['vision-content'],
-  ]
-  item.textContent = allContent[i];
-})
-console.log(mainContent);
-
-
-
-
-
-
-
-
 // const mainContent = document.querySelector('.main-content');
 // console.log(mainContent)
 
@@ -123,13 +175,6 @@ console.log(mainContent);
 // const topContent = document.querySelector('.top-content');
 // let topContentPara = topContent.querySelector('.text-content');
 // topContentPara.textContent = siteContent['main-content']['features-content']
-
-
-
-
-
-
-
 
 
 // SELECTING TOP CONTENT BEGINS //
@@ -146,7 +191,7 @@ console.log(mainContent);
 
 // SELECTING MIDDLE IMG BEGINS //
 
-const middleImg = document.querySelector('#middle-img');
+// const middleImg = document.querySelector('#middle-img');
 
 // SELECTING MIDDLE IMG ENDS //
 
@@ -166,13 +211,13 @@ const middleImg = document.querySelector('#middle-img');
 
 // SELECTING CONTACT BEGINS //
 
-const contactSection = document.querySelector('.contact');
-// console.log(contactSection);
+// const contactSection = document.querySelector('.contact');
+// // console.log(contactSection);
 
-const titleContactContent = contactSection.querySelectorAll('h4');
-const addressContent = contactSection.querySelectorAll('p');
-const phoneContent = contactSection.querySelectorAll('p');
-const emailContent = contactSection.querySelectorAll('p');
+// const titleContactContent = contactSection.querySelectorAll('h4');
+// const addressContent = contactSection.querySelectorAll('p');
+// const phoneContent = contactSection.querySelectorAll('p');
+// const emailContent = contactSection.querySelectorAll('p');
 
 // SELECTING CONTACT ENDS //
 
@@ -180,7 +225,7 @@ const emailContent = contactSection.querySelectorAll('p');
 
 // SELECTING FOOTER BEGINS //
 
-const footerContent = document.querySelectorAll(footer);
+// const footerContent = document.querySelectorAll(footer);
 
 // SELECTING FOOTER ENDS //
 
@@ -196,7 +241,7 @@ const footerContent = document.querySelectorAll(footer);
 
 
 
-featuresTextContent.textContent = siteContent["main-content"]["h1"]; // adding to page
+// featuresTextContent.textContent = siteContent["main-content"]["h1"]; // adding to page
 
 
 // featuresTextContent.textContent = 'Features';
