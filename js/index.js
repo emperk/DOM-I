@@ -68,6 +68,78 @@ const ctaSection = document.querySelector('section');
 
 const ctaTitle = ctaSection.querySelector('h1');
 const ctaButton = ctaSection.querySelector('button');
+const ctaImage = ctaSection.querySelector('img');
+
+// adding to page //
 
 ctaTitle.textContent = "Dom is Awesome";
 ctaButton.textContent = "Get Started";
+ctaImage.src = "img/header-img.png";
+
+//    CTA SECTION ENDS //
+
+//    MAIN-CONTENT SECTION BEGINS //
+
+const mainContent = document.querySelector('.main-content');
+
+const mainContentTitles = mainContent.querySelectorAll('h4');
+mainContentTitles.forEach((item, i) => {
+  const titleContents = [
+    siteContent['main-content']["features-h4"],
+    siteContent['main-content']['about-h4'],
+    siteContent['main-content']['services-h4'],
+    siteContent['main-content']['product-h4'],
+    siteContent['main-content']['vision-h4'],
+  ]
+  item.textContent = titleContents[i];
+})
+
+const middleImage = document.querySelector('#middle-img');
+middleImage.src = "img/mid-page-accent.jpg";
+
+const mainContentText = mainContent.querySelectorAll('p');
+mainContentText.forEach((item, i) => {
+  const textContents = [
+    siteContent['main-content']['features-content'],
+    siteContent['main-content']['about-content'],
+    siteContent['main-content']['services-content'],
+    siteContent['main-content']['product-content'],
+    siteContent['main-content']['vision-content'],
+  ]
+  item.textContent = textContents[i];
+})
+
+console.log(mainContent);
+
+//    MAIN-CONTENT SECTION ENDS //
+
+//    CONTACT SECTION BEGINS //
+
+// "contact": {
+//   "contact-h4" : "Contact",
+//   "address" : "123 Way 456 Street Somewhere, USA",
+//   "phone" : "1 (888) 888-8888",
+//   "email" : "sales@greatidea.io",
+// },
+// "footer": {
+//   "copyright" : "Copyright Great Idea! 2018"
+// },
+
+const contactSection = document.querySelector('.contact');
+
+const contactTitle = contactSection.querySelector('h4');
+contactTitle.textContent = siteContent['contact']['contact-h4'];
+
+const contactDetails = contactSection.querySelectorAll('p')
+
+const contactDetailContents = [
+  siteContent['contact']['address'],
+  siteContent['contact']['phone'],
+  siteContent['contact']['email'],
+]
+
+contactDetails.forEach((detail, i) => {
+  detail.textContent = contactDetailContents[i];
+})
+
+
